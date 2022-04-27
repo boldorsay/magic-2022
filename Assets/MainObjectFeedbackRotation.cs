@@ -10,28 +10,39 @@ public class MainObjectFeedbackRotation : MonoBehaviour
     public InputAction encoder;
     Vector3 scaleVel;
 
+    private float valueEncoder;
+
 
     void Awake()
     {
         encoder.Enable();
+        valueEncoder = encoder.ReadValue<float>();
 
 
     }
 
     void Update()
     {
-         Debug.Log("pos");
 
             // Get the Mesh of PlatonicShape and set it to the MeshCollider of the PlatonicShape C 
 
             
            // Update the meshCollider form the Mesh of the meshFilter
-    GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
-        GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
-        // timePaul.GetComponent<AlembicStreamPlayer>().CurrentTime = encoder1.ReadValue<float>() * 10000;
-        //transform.rotation = Quaternion.Euler(0,encoder1.ReadValue<float>()*10000,encoder2.ReadValue<float>()*10000);
-        // Vector3 targetScale = Vector3.one * Mathf.Lerp(.1f,.2f, button.ReadValue<float>());
-        // transform.localScale = Vector3.SmoothDamp(transform.localScale, targetScale, ref scaleVel, 0.2f);
+        // Put a condition to check if encoder.readvalue is changed or not 
+
+
+        if (valueEncoder != encoder.ReadValue<float>())
+        {
+
+            GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
+            GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
+                     Debug.Log(GetComponent<AlembicStreamPlayer>().CurrentTime);
+
+            valueEncoder = encoder.ReadValue<float>();
+
+        }
+
+
 
     }
 }
