@@ -20,7 +20,7 @@ public class MainObjectFeedbackRotation : MonoBehaviour
 
     void Update()
     {
-        GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 10000;
+        GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
         // timePaul.GetComponent<AlembicStreamPlayer>().CurrentTime = encoder1.ReadValue<float>() * 10000;
         //transform.rotation = Quaternion.Euler(0,encoder1.ReadValue<float>()*10000,encoder2.ReadValue<float>()*10000);
         // Vector3 targetScale = Vector3.one * Mathf.Lerp(.1f,.2f, button.ReadValue<float>());
