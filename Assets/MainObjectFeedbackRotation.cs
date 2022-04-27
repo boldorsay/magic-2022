@@ -20,6 +20,13 @@ public class MainObjectFeedbackRotation : MonoBehaviour
 
     void Update()
     {
+         Debug.Log("pos");
+
+            // Get the Mesh of PlatonicShape and set it to the MeshCollider of the PlatonicShape C 
+
+            
+           // Update the meshCollider form the Mesh of the meshFilter
+    GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
         GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
         // timePaul.GetComponent<AlembicStreamPlayer>().CurrentTime = encoder1.ReadValue<float>() * 10000;
         //transform.rotation = Quaternion.Euler(0,encoder1.ReadValue<float>()*10000,encoder2.ReadValue<float>()*10000);
