@@ -1118,6 +1118,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2488301410789057806, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
+--- !u!114 &1072811683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072811679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0044220612c48cdac57130f8bf8a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encoder:
+    m_Name: Encoder
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: efdb2460-e67a-499b-8d43-758ca7dd6a21
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1231597405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
@@ -1195,23 +1216,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.32451883
+      value: 0.33042276
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.062668726
+      value: 0.007786835
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.17895372
+      value: -0.022235705
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.92667997
+      value: 0.94353896
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 21.86
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c81f83c5509548c9b22a8df45ef3923, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

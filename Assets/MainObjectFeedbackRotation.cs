@@ -38,16 +38,24 @@ public class MainObjectFeedbackRotation : MonoBehaviour
             // GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
             // get the value of the encoder and add it on the blensh of the platonic shape 
 
-            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, encoder.ReadValue<float>() * 100);
-            Debug.Log(GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0));
+            // GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, encoder.ReadValue<float>() * 100);
+            // Debug.Log(GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0));
 
 
-            var render = GetComponent<SkinnedMeshRenderer>();
-            render.SetBlendShapeWeight(0,100f);
-            Mesh bakeMesh = new Mesh();
-            render.BakeMesh(bakeMesh);
-            var collider = GetComponent<MeshCollider>();
-            collider.sharedMesh = bakeMesh;
+            // var render = GetComponent<SkinnedMeshRenderer>();
+            // render.SetBlendShapeWeight(0,100f);
+            // Mesh bakeMesh = new Mesh();
+            // render.BakeMesh(bakeMesh);
+            // var collider = GetComponent<MeshCollider>();
+            // collider.sharedMesh = bakeMesh;
+
+            // Change the roatation of the object with the encoder value 
+            transform.rotation = Quaternion.Euler( encoder.ReadValue<float>() * 100, 0,0);
+
+
+
+
+            // GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, encoder.ReadValue<float>() * 100);
 
 
 
