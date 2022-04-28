@@ -24,23 +24,39 @@ public class MainObjectFeedbackRotation : MonoBehaviour
     void Update()
     {
 
-            // Get the Mesh of PlatonicShape and set it to the MeshCollider of the PlatonicShape C 
+        //     Get the Mesh of PlatonicShape and set it to the MeshCollider of the PlatonicShape C 
 
             
-           // Update the meshCollider form the Mesh of the meshFilter
+        //    Update the meshCollider form the Mesh of the meshFilter
         // Put a condition to check if encoder.readvalue is changed or not 
 
 
-        // if (valueEncoder != encoder.ReadValue<float>())
-        // {
+        if (valueEncoder != encoder.ReadValue<float>())
+        {
 
-        //     GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
-        //     GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
-        //              Debug.Log(GetComponent<AlembicStreamPlayer>().CurrentTime);
+            // GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
+            // GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
+            // get the value of the encoder and add it on the blensh of the platonic shape 
 
-        //     valueEncoder = encoder.ReadValue<float>();
+            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, encoder.ReadValue<float>() * 100);
+            Debug.Log(GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(0));
 
-        // }
+
+            var render = GetComponent<SkinnedMeshRenderer>();
+            render.SetBlendShapeWeight(0,100f);
+            Mesh bakeMesh = new Mesh();
+            render.BakeMesh(bakeMesh);
+            var collider = GetComponent<MeshCollider>();
+            collider.sharedMesh = bakeMesh;
+
+
+
+            // GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
+                    //  Debug.Log(GetComponent<AlembicStreamPlayer>().CurrentTime);
+
+            valueEncoder = encoder.ReadValue<float>();
+
+        }
 
 
 
