@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Formats.Alembic.Importer;
+//using UnityEngine.Formats.Alembic.Importer;
 
 public class MainObjectFeedbackRotation : MonoBehaviour
 {
@@ -31,16 +31,16 @@ public class MainObjectFeedbackRotation : MonoBehaviour
         // Put a condition to check if encoder.readvalue is changed or not 
 
 
-        if (valueEncoder != encoder.ReadValue<float>())
-        {
+        // if (valueEncoder != encoder.ReadValue<float>())
+        // {
 
-            GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
-            GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
-                     Debug.Log(GetComponent<AlembicStreamPlayer>().CurrentTime);
+        //     GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
+        //     GetComponent<AlembicStreamPlayer>().CurrentTime = encoder.ReadValue<float>() * 100;
+        //              Debug.Log(GetComponent<AlembicStreamPlayer>().CurrentTime);
 
-            valueEncoder = encoder.ReadValue<float>();
+        //     valueEncoder = encoder.ReadValue<float>();
 
-        }
+        // }
 
 
 

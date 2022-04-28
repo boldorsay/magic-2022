@@ -19,13 +19,7 @@ public class cube : MonoBehaviour
             Vector3 pos = Vector3.MoveTowards(transform.position, traget[current].position, speed * Time.deltaTime);
             GetComponent<Transform>().position = pos;
 
-            Debug.Log("pos");
-
-            // Get the Mesh of PlatonicShape and set it to the MeshCollider of the PlatonicShape C 
-
-            
-           // Update the meshCollider form the Mesh of the meshFilter
-            GetComponentInChildren<MeshCollider>().sharedMesh = GetComponentInChildren<MeshFilter>().mesh; 
+           
         }
         else
         {
