@@ -49,7 +49,7 @@ public class rotationY : MonoBehaviour
             // collider.sharedMesh = bakeMesh;
 
             // Change the roatation of the object with the encoder value 
-            transform.rotation = Quaternion.Euler( 0 , 0 + encoder.ReadValue<float>() * 100, 0);
+            transform.rotation = Quaternion.Euler( 5 , 0 + encoder.ReadValue<float>() * 100, 0);
 
 
 

@@ -1,5 +1,3 @@
-
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 //using UnityEngine.Formats.Alembic.Importer;
 
-public class rotationYTrompette : MonoBehaviour
+public class rotationZvirage : MonoBehaviour
 {
     public InputAction encoder;
     Vector3 scaleVel;
@@ -51,7 +49,7 @@ public class rotationYTrompette : MonoBehaviour
             // collider.sharedMesh = bakeMesh;
 
             // Change the roatation of the object with the encoder value 
-            transform.rotation = Quaternion.Euler( 0 , -90 , -40 + encoder.ReadValue<float>() * 100);
+            transform.localRotation = Quaternion.Euler( 0, 0, 0 + encoder.ReadValue<float>() * 100);
 
 
 
