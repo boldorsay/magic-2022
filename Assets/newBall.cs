@@ -19,7 +19,15 @@ button.Enable();
 
  void Update()
     {
- 
+
+        // if(Input.GetMouseButtonDown(1))
+        // {
+        //     Instantiate(prefab, transform.position, transform.rotation);
+        // }
+    
+
+    
+    
 if(button.WasPressedThisFrame()){
   Debug.Log("pressed");
 //yield return new WaitForSeconds(5);

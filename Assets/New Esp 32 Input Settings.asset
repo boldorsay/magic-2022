@@ -15,9 +15,9 @@ MonoBehaviour:
   serverPort: 8888
   clients:
   - name: controller1
-    address: 10.189.8.57
+    address: 172.20.10.4
     port: 9999
-    autoConnectInBuild: 1
+    autoConnectInBuild: 0
   - name: controller2
     address: 10.189.8.136
     port: 9999
@@ -33,7 +33,7 @@ MonoBehaviour:
   - name: controller5
     address: 10.189.8.119
     port: 9999
-    autoConnectInBuild: 0
+    autoConnectInBuild: 1
   - name: controller6
     address: 10.189.8.15
     port: 9999
